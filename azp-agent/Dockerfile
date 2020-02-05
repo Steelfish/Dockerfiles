@@ -64,8 +64,13 @@ RUN dotnet_sdk_version=3.1.101 \
 
 # Add .NET tools to PATH
 ENV PATH="/root/.dotnet/tools:${PATH}"
-# Install Cake as a dotnet global tool
-RUN dotnet tool install -g Cake.Tool
+# Install Cake 0.36 as a dotnet global tool
+RUN dotnet tool install -g Cake.Tool --version 0.36.0
+# Install GitVersion 5.1.3 as a dotnet global tool
+RUN dotnet tool install -g GitVersion.Tool --version 5.1.3
+# Install Reportgenerator 4.4.6 as a dotnet global tool
+RUN dotnet tool install -g Reportgenerator-globaltool --version 4.4.6
+
 
 # Install kubectl
 ENV KUBE_VERSION="v1.3.5"

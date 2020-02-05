@@ -6,7 +6,9 @@ The agent runs with:
 * Docker 18.09.7
 * Kubectl v1.3.5
 * .NET 3.1 SDK
-* Cake .NET global tool
+* Cake 0.36.0 .NET global tool
+* GitVersion 5.1.3 .NET global tool
+* Reportgenerator 4.4.6 .NET global tool
 
 Available environment variables:
 
