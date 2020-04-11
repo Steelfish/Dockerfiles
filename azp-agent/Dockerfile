@@ -69,7 +69,7 @@ RUN dotnet tool install -g Cake.Tool --version 0.36.0
 # Install GitVersion 5.1.3 as a dotnet global tool
 RUN dotnet tool install -g GitVersion.Tool --version 5.1.3
 # Install Reportgenerator 4.4.6 as a dotnet global tool
-RUN dotnet tool install -g Reportgenerator-globaltool --version 4.4.6
+RUN dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.4.6
 
 
 # Install kubectl
