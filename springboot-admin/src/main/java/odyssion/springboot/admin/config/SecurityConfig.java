@@ -11,6 +11,8 @@ import org.springframework.security.web.authentication.SavedRequestAwareAuthenti
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private static final String REDIRECT_PATH = "redirectTo";
     private static final String ASSETS_PATH = "/assets/**";
+    // private static final String INSTANCES_URLS_PATH = "/instances/**"
+    private static final String INSTANCES_PATH = "/instances/**";
     private static final String LOGIN_PATH = "/login";
     private static final String LOGOUT_PATH = "/logout";
     private final String adminContextPath;
@@ -28,6 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
             .antMatchers(adminContextPath + ASSETS_PATH).permitAll()
             .antMatchers(adminContextPath + LOGIN_PATH).permitAll()
+            .antMatchers(adminContextPath + INSTANCES_PATH).permitAll()
             .requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
             .anyRequest().authenticated()
             .and()
